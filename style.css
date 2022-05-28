@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#check {
+	display: none;
+}
+
+.logo {
+	margin-left: 70px;
+	line-height: 70px;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #75e8e7;
+}
+
+.navbar {
+	background-color: #27104e;
+	font-family: poppins;
+}
+
+.navlist {
+	float: right;
+	margin-right: 70px;
+	line-height: 70px;
+}
+
+.navlist li {
+	display: inline-block;
+}
+
+.navlist li a {
+	margin-right: 40px;
+	color: #75e8e7;
+	text-decoration: none;
+}
+
+.navlist li a:hover {
+	color: #ddacf5;
+}
+
+.burger div {
+	background-color: #75e8e7;
+	margin: 3px;
+	height: 3px;
+	width: 20px;
+}
+
+.burger {
+	float: right;
+	padding: 24px;
+	display: none;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(sk.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form input {
+	height: 30px;
+	border-radius: 10px;
+	border: none;
+	padding: 7px;
+}
+
+section div {
+	
+	width: 300px;
+	padding: 30px;
+}
+
+#submit {
+	background-color: #75e8e7;
+}
+
+
+@media (max-width: 742px) {
+	.logo {
+		margin-left: 15px;
+	}
+
+	.navlist li a {
+		margin-right: 15px;
+	}
+
+	.navlist {
+		margin-right: 15px;
+	}
+}
+
+@media (max-width: 516px) {
+	.navlist {
+		position: fixed;
+		background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(qq.jpg);
+		background-position: center;
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+		transition: all 0.5s;
+		left: -100%;
+		cursor: pointer;
+				
+	}
+
+	.navlist li {
+		text-align: center;
+		display: block;
+		padding: 20px;
+	}
+
+	.burger {
+		display: block;
+	}
+
+	#check:checked ~ .navlist {
+		left: 0;s
+	}
+}
+
